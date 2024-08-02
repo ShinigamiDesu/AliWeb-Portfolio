@@ -91,6 +91,15 @@ body{
     padding-bottom: 5px;
 }
 
+@media (max-width: 500px) {
+    .menu{
+        width: 95%;
+        font-size: 13px;
+        gap: 2px;
+        padding-left: 10px;
+    }
+}
+
 
 
 
