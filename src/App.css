@@ -246,12 +246,22 @@ body{
 @media (max-width: 768px) {
 
     .eduContentContainer{
-        padding-left: 0;
-        padding-right: 4;
+        padding-left: 0px;
+        align-items: center;
     }
 
-    .eduUni, .eduDegree, .eduSpan1, .eduSpan2{
-        font-size: 21px;
+    .eduUni{
+        font-size: 13px;
+        padding-left: 5px;
+    }
+    
+    .eduDegree{
+        font-size: 15px;
+    }
+
+    .eduSpan1, .eduSpan2{
+        font-size: 10px;
+        padding-left: 8px;
     }
 }
 
@@ -431,7 +441,11 @@ body{
 @media (max-width: 768px) {
 
     .techParaContainer{
-        padding-left: 0;
+        padding-left: 15px;
+    }
+
+    .techPara{
+        font-size: 15px;
     }
 }
 
@@ -551,50 +565,29 @@ body{
 
 @media (max-width: 768px) {
     .rentIMG {
-      max-width: 700px; /* Further reduce the maximum width */
-      max-height: 250px; /* Further reduce the maximum height */
+      max-width: 500px; /* Further reduce the maximum width */
+      max-height: 200px; /* Further reduce the maximum height */
+      height: auto;
+    }
+
+    .itemIMG{
+        max-width: 500px; /* Further reduce the maximum width */
+      max-height: 400px; /* Further reduce the maximum height */
       height: auto;
     }
 
     .projParaContainer{
-        padding-left: 0;
+        padding-left: 23px;
     }
-}
 
-/* EXPERIENCE */
+    .projPara{
+        font-size: 15px;
+    }
 
-#Experience{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.expTitle{
-    font-weight: 400;
-    color: white;
-    font-size: 50px;
-    align-self: center;
-}
-
-.expCompany{
-    font-weight: 300;
-    color: white;
-    font-size: 40px;
-    padding-left: 100px;
-}
-
-.expType{
-    color: gray;
-    font-weight: 200;
-    font-size: 30px;
-    padding-left: 100px;
-}
-
-.expPosition{
-    font-weight: 200;
-    color: white;
-    font-size: 40px;
-    padding-left: 100px;
+    .projEndText{
+        font-size: 17px;
+        padding-left: 20px;
+    }
 }
 
 .Footer{
