@@ -8,6 +8,7 @@ import CSS from "../assets/CSS.png";
 import JS from "../assets/JS.png";
 import NET from "../assets/Net.png";
 import REACT from "../assets/react.png";
+import Blazor from "../assets/Blazor.png";
 
 function Tech() {
   return (
@@ -89,6 +90,11 @@ function Tech() {
                     <div className='Item'>
                         <img className='CHASHimg' alt="" src={NET}/>
                         <p className='NETtext'>Microsoft .NET</p>
+                    </div>
+
+                    <div className='Item'>
+                        <img className='CHASHimg' alt="" src={Blazor}/>
+                        <p className='JAVAtext'>Blazor</p>
                     </div>
                 </div>
             </div>
