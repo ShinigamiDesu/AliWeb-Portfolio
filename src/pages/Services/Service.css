@@ -1,0 +1,109 @@
+.service--main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.lol2{
+    color: cyan;
+}
+
+.service--types--container{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 30px;
+    max-width: 90%;
+}
+
+.service--type--item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #434343, #1f1c2c);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    border: 2px solid rgb(83, 83, 83);
+    border-radius: 10px;
+    height: 400px;
+    width: 400px;
+    gap: 20px;
+}
+
+.service--type---img{
+    height: 240px;
+    width: 270px;
+    border-radius: 10px;
+}
+
+.h2{
+    font-size: 20px;
+    font-weight: 200;
+    align-self: center;
+    color: var(--text-color);
+}
+
+.h1{
+    font-weight: 200;
+    font-size: 25px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px){
+    .service--main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 120px;
+    }
+    
+    .service--types--container{
+        display: flex;
+        flex-wrap: wrap;
+        align-self: center;
+        justify-content: center;
+        column-gap: 30px;
+        row-gap: 30px;
+        max-width: 100%;
+    }
+    
+    .service--type--item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #000000, #434343, #1f1c2c);
+        background-size: 400% 400%;
+        animation: gradientBackground 15s ease infinite;
+        border: 2px solid rgb(83, 83, 83);
+        border-radius: 10px;
+        height: 450px;
+        width: 450px;
+        gap: 20px;
+    }
+    
+    .service--type---img{
+        height: 340px;
+        width: 370px;
+        border-radius: 10px;
+    }
+    
+    .h2{
+        font-size: 25px;
+        font-weight: 200;
+        align-self: center;
+        color: var(--text-color);
+    }
+    
+    .h1{
+        font-weight: 200;
+        font-size: 30px;
+        align-self: center;
+        margin-bottom: 20px;
+    }
+}

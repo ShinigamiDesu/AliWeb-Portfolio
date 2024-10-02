@@ -1,37 +1,18 @@
+import Header from './components/Header';
 import './App.css';
-import Navbar from './components/Navbar';
-import Education from './pages/Education';
-import Home from './pages/Home';
-import Tech from './pages/Tech';
-import Projects from './pages/Projects';
-import Footer from './components/Footer';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Service from './pages/Services/Service';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Header/>
       <Home/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <hr class="gray-line"/>
-      <Education/>
-      <br/>
-      <br/>
-      <hr class="gray-line"/>
-      <Tech/>
-      <br/>
-      <br/>
-      <hr class="gray-line"/>
-      <Projects/>
-      <br/>
-      <br/>
-      <hr class="gray-line"/>
-      <br/>
-      <Footer/>
+      <About/>
+      <Service/>
+      <Contact/>
     </div>
   );
 }

@@ -1,0 +1,168 @@
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.lol{
+    display: none;
+}
+
+.about--main{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #000000, #434343, #1f1c2c);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    max-width: 80%;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 50px;
+
+}
+
+h1{
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.about--para{
+    color: var(--gray-color);
+    font-size: 14px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+.about--nums{
+    display: flex;
+    gap: 35px;
+    margin-top: 20px;
+}
+
+.about--div{
+    display: flex;
+    flex-direction: column;
+}
+
+.about--num{
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.about--plus{
+    color: cyan;
+}
+
+.about--div--p{
+    color: var(--gray-color);
+    font-size: 18px;
+}
+
+.about--tools{
+    display: flex;
+    flex-direction: column;
+    width: 84%;
+}
+
+h2{
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.about--tool--container{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 40px;
+    justify-content: center;
+}
+
+.about--tool-item{
+    border: 2px solid rgb(83, 83, 83);
+    background: linear-gradient(135deg, #000000, #434343, #1f1c2c);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    display: flex;
+    gap: 10px;
+    width: 280px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.about--tool-item:hover{
+    background-color: rgb(83, 83, 83);
+    transition: 1000ms;
+}
+
+.img--container{
+    display: flex;
+    background-color: var(--secondary-color);
+    height: 60px;
+    width: 70px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--accent-color-light);
+}
+
+.about--tool--img{
+    height: 35px;
+    width: 35px;
+}
+
+.about--tool--name{
+    color: var(--text-color);
+    align-self: center;
+}
+
+
+@media (min-width: 768px){
+    .lol{
+        display: inline;
+        font-family: king;
+        color: gray;
+        font-size: 25px;
+        margin-left: auto; /* This will move the element to the far right */
+        margin-top: 50px;
+    }
+
+    .about--main{
+        display: flex;
+        flex-direction: column;
+        max-width: 85%;
+        padding: 30px;
+        border-radius: 20px;
+        margin-top: 150px;
+    }
+    
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 30px;
+        align-self: flex-start;
+        font-weight: 200;
+    }
+    
+    .about--para{
+        font-size: 18px;
+    }
+
+    .about--tool--container{
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about--main{
+        margin-top: 65px;
+    }
+}

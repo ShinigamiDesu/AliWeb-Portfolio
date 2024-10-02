@@ -1,0 +1,98 @@
+.navbar--main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Adds a shadow for better visibility */
+    position: relative;
+}
+
+.navbar--bars{
+    display: inline;
+}
+
+.nav--bars:hover{
+    cursor: pointer;
+}
+
+ul{
+    display: none;
+}
+
+.navbar--button{
+    display: none;
+}
+
+.Logo{
+    font-family: king;
+    font-size: 30px;
+    color: var(--gray-color);
+}
+
+/* Sticky Navbar for large screens */
+@media (min-width: 768px) {
+    .nav--bars{
+        display: none;
+    }
+
+    .navbar--main {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        backdrop-filter: blur(10px); /* Optional: Adds a blurred background effect */
+        position: sticky;
+        top: 0; /* Sticks to the top */
+        z-index: 999; /* Ensures it stays on top of other elements */
+        padding: 10px 50px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adds a shadow for better visibility */
+    }
+    
+    ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        background-color: var(--accent-color-light);
+        border-radius: 20px;
+        height: 65px;
+        width: 400px;
+    }
+    
+    li {
+        color: var(--text-color);
+        font-size: 15px;
+        font-weight: 400;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+    
+    li:hover {
+        background-color: var(--white-color);
+        color: var(--black-color);
+        cursor: pointer;
+        transition: 1000ms;
+    }
+    
+    .navbar--button {
+        background-color: var(--text-color);
+        color: var(--black-color);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 400;
+        display: inline;
+    }
+    
+    .navbar--button:hover {
+        background-color: var(--gray-color);
+        transition: 500ms;
+    }
+    
+    .Logo{
+        font-family: king;
+        font-size: 30px;
+        color: var(--gray-color);
+    }
+}
