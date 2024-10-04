@@ -1,10 +1,13 @@
 .navbar--main {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 50px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Adds a shadow for better visibility */
-    position: relative;
+    backdrop-filter: blur(10px); /* Optional: Adds a blurred background effect */
+    position: sticky;
+    top: 0; /* Sticks to the top */
+    z-index: 999; /* Ensures it stays on top of other elements */
 }
 
 .navbar--bars{
@@ -15,8 +18,37 @@
     cursor: pointer;
 }
 
-ul{
+.ul{
     display: none;
+    flex-direction: column;
+    position: absolute;
+    list-style: none;
+    top: 60px;
+    right: 10px;
+    background-color: var(--accent-color-light);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+li {
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+li:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    cursor: pointer;
+    transition: 1000ms;
+}
+
+.ul.open{
+    display: flex;
 }
 
 .navbar--button{
@@ -27,6 +59,7 @@ ul{
     font-family: king;
     font-size: 30px;
     color: var(--gray-color);
+    align-self: center;
 }
 
 /* Sticky Navbar for large screens */
@@ -34,21 +67,11 @@ ul{
     .nav--bars{
         display: none;
     }
-
-    .navbar--main {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        backdrop-filter: blur(10px); /* Optional: Adds a blurred background effect */
-        position: sticky;
-        top: 0; /* Sticks to the top */
-        z-index: 999; /* Ensures it stays on top of other elements */
-        padding: 10px 50px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Adds a shadow for better visibility */
-    }
     
-    ul {
+    .ul {
         display: flex;
+        flex-direction: row;
+        position: static;
         justify-content: space-around;
         align-items: center;
         list-style: none;
@@ -56,21 +79,6 @@ ul{
         border-radius: 20px;
         height: 65px;
         width: 400px;
-    }
-    
-    li {
-        color: var(--text-color);
-        font-size: 15px;
-        font-weight: 400;
-        padding: 10px 20px;
-        border-radius: 10px;
-    }
-    
-    li:hover {
-        background-color: var(--white-color);
-        color: var(--black-color);
-        cursor: pointer;
-        transition: 1000ms;
     }
     
     .navbar--button {
@@ -83,6 +91,8 @@ ul{
         font-size: 15px;
         font-weight: 400;
         display: inline;
+        height: 50px;
+        align-self: center;
     }
     
     .navbar--button:hover {
