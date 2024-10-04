@@ -19,6 +19,11 @@
     cursor: pointer;
 }
 
+.imgimg:hover{
+    box-shadow: 0 0 20px 5px gray; /* White glow effect */
+    transition: box-shadow 0.2s ease-in-out; /* Smooth transition */
+}
+
 .contact--div1{
     display: flex;
     justify-content: center;

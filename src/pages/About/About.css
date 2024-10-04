@@ -97,8 +97,8 @@ h2{
 }
 
 .about--tool-item:hover{
-    background-color: rgb(83, 83, 83);
-    transition: 1000ms;
+    box-shadow: 0 0 20px 5px gray; /* White glow effect */
+    transition: box-shadow 0.2s ease-in-out; /* Smooth transition */
 }
 
 .img--container{

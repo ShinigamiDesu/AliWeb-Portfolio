@@ -34,6 +34,11 @@
     gap: 20px;
 }
 
+.service--type--item:hover{
+    box-shadow: 0 0 20px 5px gray; /* White glow effect */
+    transition: box-shadow 0.2s ease-in-out; /* Smooth transition */
+}
+
 .service--type---img{
     height: 240px;
     width: 270px;

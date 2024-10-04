@@ -9,7 +9,9 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
+
     if(!email || !name || !message){
         Swal.fire({
             title: 'Fill All Fields',
@@ -18,17 +20,43 @@ function Contact() {
         return;
     }
 
-    Swal.fire({
-        title: 'Message Sent!',
-        text: 'Thank you for reaching out. I will get back to you soon!',
-        icon: 'success',
-        confirmButtonText: 'OK',
+    try {
+      const response = await fetch('https://getform.io/f/alljmzqa', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }), // Send form data
       });
 
-      // Clear the form after submission
-      setName('');
-      setEmail('');
-      setMessage('');
+      if (response.ok) {
+        Swal.fire({
+          title: 'Message Sent!',
+          text: 'Thank you for reaching out. I will get back to you soon!',
+          icon: 'success',
+          confirmButtonText: 'OK',
+        });
+
+        // Clear the form after successful submission
+        setName('');
+        setEmail('');
+        setMessage('');
+      } else {
+        Swal.fire({
+          title: 'Error!',
+          text: 'Something went wrong. Please try again later.',
+          icon: 'error',
+          confirmButtonText: 'OK',
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        title: 'Error!',
+        text: 'Something went wrong. Please try again later.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+      });
+    }
   };
 
   return (
